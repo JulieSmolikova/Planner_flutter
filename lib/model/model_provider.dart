@@ -6,18 +6,16 @@ import '../start_page.dart';
 class Data extends ChangeNotifier {
 
   final List pages = [
-    //const StartPage(),
     const CommonPage(),
     const OngoingPage(),
   ];
 
-  final List icons = [
-    //Icons.circle_outlined,
-    Icons.home_outlined,
-    Icons.checklist_rtl,
-    //Icons.manage_accounts,
-    //Icons.mark_email_unread_outlined,
-  ];
+  // final List icons = [
+  //   Icons.home_outlined,
+  //   Icons.checklist_rtl,
+  //   Icons.manage_accounts,
+  //   Icons.mark_email_unread_outlined,
+  // ];
 
   final List iconsActive = [
     'home_brown.png',

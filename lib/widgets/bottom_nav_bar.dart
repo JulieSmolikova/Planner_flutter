@@ -14,9 +14,9 @@ class BottomNavBar extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Consumer<Data>(builder: (context, data, _){
       return Positioned(
-        bottom: 0,
+        bottom: 10,
         child: Container(
-          height: 50,
+          height: 30,
           width: size.width,
           color: Colors.transparent,
           child: Row(
@@ -30,28 +30,22 @@ class BottomNavBar extends StatelessWidget {
                         duration: const Duration(milliseconds: 200),
                         curve: Curves.easeIn);
                   },
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    color: Colors.transparent,
-                    child: Center(
+                  child: Center(
+                    child: Container(
+                      height: 30,
+                      width: 30,
+                      color: Colors.transparent,
+                      child: Image.asset(
+                        data.activePage == index
+                            ? ('assets/icons/${data.iconsActive[index]}')
+                            : ('assets/icons/${data.iconsPassive[index]}')
 
-                      child: Container(
-                        height: 30,
-                        width: 30,
-                        //color: Colors.grey,
-                        child: Image.asset(
-                          data.activePage == index
-                              ? ('assets/icons/${data.iconsActive[index]}')
-                              : ('assets/icons/${data.iconsPassive[index]}')
+                        // data.icons[index],
+                        // color: data.activePage == index
+                        //   ? KBrown
+                        //   : KYellow,
+                        // size: 30,
 
-                          // data.icons[index],
-                          // color: data.activePage == index
-                          //   ? KBrown
-                          //   : KYellow,
-                          // size: 30,
-
-                        ),
                       ),
                     ),
                   ),

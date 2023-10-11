@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:planner/common_page.dart';
 import 'package:planner/widgets/constants.dart';
 
+import 'main_page.dart';
+
 class StartPage extends StatelessWidget {
   const StartPage({Key? key}) : super(key: key);
 
@@ -120,7 +122,7 @@ class StartPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) {
-                                return const CommonPage();
+                                return const MainPage();
                               }));
                     },
                     child: Padding(

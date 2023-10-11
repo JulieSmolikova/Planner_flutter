@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planner/start_page.dart';
 import 'package:provider/provider.dart';
 import 'main_page.dart';
 import 'model/model_provider.dart';
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<Data>(create: (_) => Data(),
+    return ChangeNotifierProvider<Data>(
+      create: (_) => Data(),
       builder: (context, child){
 
           return const MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: MainPage(),
+            home: StartPage(),
           );
         },
     );
