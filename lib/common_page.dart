@@ -50,12 +50,17 @@ class CommonPage extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) {
-                                      return const StartPage();
-                                    }));
+                            Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+
+                                MaterialPageRoute(builder: (context) => const StartPage()),
+                                (route) => false
+                            );
+                            // Navigator.pushReplacement(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) {
+                            //           return const StartPage();
+                            //         }));
                           },
                           child: Container(
                             height: size.width * 0.13,
@@ -140,18 +145,7 @@ class CommonPage extends StatelessWidget {
                             color: KYellow,
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(color: KBrown.withOpacity(0.9), width: 3),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: KBrown.withOpacity(0.9),
-                                  offset: const Offset(5, 5),
-                                  blurRadius: 15
-                              ),
-                              BoxShadow(
-                                  color: KBrown.withOpacity(0.4),
-                                  offset: const Offset(-5, -5),
-                                  blurRadius: 15
-                              )
-                            ]
+                            boxShadow: KboxShadow,
                         ),
                         child: const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -162,20 +156,15 @@ class CommonPage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text('Mobile App \nFlutter',
-                                    style: TextStyle(
-                                        color: KBrown,
-                                        fontFamily: 'Mulish Bold',
-                                        fontSize: 18),),
+                                    style: KTextStyle18),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text('Now',
-                                      style: TextStyle(
-                                          color: KBrown,
-                                          fontFamily: 'Mulish Bold',
-                                          fontSize: 15))
+                                      style: KTextStyle15
+                                  )
                                 ],
                               )
                             ],
@@ -236,18 +225,7 @@ class CommonPage extends StatelessWidget {
                                       color: KPink,
                                       borderRadius: BorderRadius.circular(15),
                                       border: Border.all(color: KBrown.withOpacity(0.8), width: 3),
-                                      boxShadow: [
-                                        BoxShadow(
-                                            color: KBrown.withOpacity(0.4),
-                                            offset: const Offset(-5, -5),
-                                            blurRadius: 15
-                                        ),
-                                        BoxShadow(
-                                            color: KBrown.withOpacity(0.9),
-                                            offset: const Offset(5, 5),
-                                            blurRadius: 15
-                                        )
-                                      ]
+                                      boxShadow: KboxShadow,
                                   ),
                                 ),
                               )
