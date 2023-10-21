@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planner/common_page.dart';
 import 'package:planner/widgets/constants.dart';
-
 import 'main_page.dart';
 
 class StartPage extends StatelessWidget {
@@ -23,10 +21,10 @@ class StartPage extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.black,
-                    KLavander,
-                    KLavander,
-                    KLavander,
-                    KPink
+                    kLavender,
+                    kLavender,
+                    kLavender,
+                    kPink
                   ],
                   stops: [
                     0,
@@ -52,12 +50,12 @@ class StartPage extends StatelessWidget {
                         bottom: Radius.circular(150.0)),
                       boxShadow: [
                         BoxShadow(
-                            color: KBrown.withOpacity(0.9),
+                            color: kBrown.withOpacity(0.9),
                             offset: const Offset(5, 5),
                             blurRadius: 15
                         ),
                         BoxShadow(
-                            color: KBrown2.withOpacity(0.4),
+                            color: kBrown2.withOpacity(0.4),
                             offset: const Offset(-5, -5),
                             blurRadius: 15
                         )
@@ -76,7 +74,7 @@ class StartPage extends StatelessWidget {
                     child: const Text('Manage your \ndaily tasks',
                       style: TextStyle(
                           fontSize: 42,
-                          color: KBrown2,
+                          color: kBrown2,
                           fontFamily: 'Mulish Bold'
                       )),
                   )),
@@ -90,7 +88,7 @@ class StartPage extends StatelessWidget {
                     child: const Text('Team and Project management with \nsolution providing App',
                       style: TextStyle(
                           fontSize: 18,
-                          color: KBrown2,
+                          color: kBrown2,
                           fontWeight: FontWeight.w500,
                       )
                     ),
@@ -135,7 +133,7 @@ class StartPage extends StatelessWidget {
                         child: const Text('      Get Started',
                           style: TextStyle(
                               fontSize: 19,
-                              color: KBrown2,
+                              color: kBrown2,
                               fontWeight: FontWeight.w600,
                           ),),
                       ),

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planner/start_page.dart';
-import 'package:planner/widgets/bottom_nav_bar.dart';
 import 'package:planner/widgets/constants.dart';
 import 'package:provider/provider.dart';
-import 'common_page.dart';
-import 'main_page.dart';
 import 'model/model_provider.dart';
 
 class OngoingPage extends StatelessWidget {
@@ -27,10 +23,10 @@ class OngoingPage extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.black,
-                    KVin,
-                    KVin,
-                    KVin,
-                    KPink
+                    kVin,
+                    kVin,
+                    kVin,
+                    kPink
                   ],
                   stops: [
                     0,
@@ -66,7 +62,7 @@ class OngoingPage extends StatelessWidget {
                           color: Colors.transparent,
                           child: Icon(
                             Icons.add_task,
-                            color: KPink.withOpacity(0.6),
+                            color: kPink.withOpacity(0.6),
                             size: size.width * 0.11,),
                         ),
                       ),
@@ -74,7 +70,7 @@ class OngoingPage extends StatelessWidget {
                         width: size.width * 0.14,
                         height: size.width * 0.14,
                         decoration: BoxDecoration(
-                            color: KPink.withOpacity(0.7),
+                            color: kPink.withOpacity(0.7),
                             borderRadius: BorderRadius.circular(50)
                         ),
                         child: Padding(
@@ -88,12 +84,12 @@ class OngoingPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
-                                      color: KPink.withOpacity(0.3),
+                                      color: kPink.withOpacity(0.3),
                                       offset: const Offset(5, 5),
                                       blurRadius: 15
                                   ),
                                   BoxShadow(
-                                      color: KPink.withOpacity(0.3),
+                                      color: kPink.withOpacity(0.3),
                                       offset: const Offset(-5, -5),
                                       blurRadius: 15
                                   )
@@ -136,8 +132,8 @@ class OngoingPage extends StatelessWidget {
                                       style: TextStyle(
                                       fontFamily: 'Mulish Bold',
                                       color: data.isSelectedMonth == index
-                                      ? KYellow
-                                      : KPink.withOpacity(0.8),
+                                      ? kYellow
+                                      : kPink.withOpacity(0.8),
                                       fontSize: data.isSelectedMonth == index
                                         ? 25
                                         : 15,
@@ -168,24 +164,29 @@ class OngoingPage extends StatelessWidget {
                             onSelectedItemChanged: (index) => data.SelectedData(index),
                             itemExtent: 100,
                             children: List.generate(
-                              31, (index) => RotatedBox(
+                              data.isSelectedMonth == 1
+                              ? 29
+                              : data.isSelectedMonth %2 != 0
+                              ? 31
+                              : 30,
+                              (index) => RotatedBox(
                                 quarterTurns: 0,
                                 child: Container(
                                   width: size.width * 0.18,
                                   margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 23),
                                   decoration: BoxDecoration(
                                     color: data.isSelectedData == index
-                                    ? KPink
-                                    : KYellow,
+                                    ? kPink
+                                    : kYellow,
                                     borderRadius: BorderRadius.circular(30),
                                     border: Border.all(
                                         color: data.isSelectedData == index
-                                        ? KBrown.withOpacity(0.7)
-                                        : KBrown.withOpacity(0.9),
+                                        ? kBrown.withOpacity(0.7)
+                                        : kBrown.withOpacity(0.9),
                                         width: 3),
                                     boxShadow: data.isSelectedData == index
-                                    ? KboxShadowYellow
-                                    : KboxShadow
+                                    ? kBoxShadowYellow
+                                    : kBoxShadow
                                   ),
                                   child: RotatedBox(
                                     quarterTurns: 1,
@@ -197,8 +198,8 @@ class OngoingPage extends StatelessWidget {
                                           style: TextStyle(
                                             fontFamily: 'Mulish Bold',
                                             color: data.isSelectedData == index
-                                                ? KBrown
-                                                : KBrown.withOpacity(0.8),
+                                                ? kBrown
+                                                : kBrown.withOpacity(0.8),
                                             fontSize: data.isSelectedData == index
                                                 ? 25
                                                 : 15,
@@ -231,9 +232,9 @@ class OngoingPage extends StatelessWidget {
                             margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
-                              color: KPink,
-                              border: Border.all(width: 3, color: KBrown.withOpacity(0.9)),
-                              boxShadow: KboxShadow,
+                              color: kPink,
+                              border: Border.all(width: 3, color: kBrown.withOpacity(0.9)),
+                              boxShadow: kBoxShadow,
                             ),
                             child: const Padding(
                               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -244,16 +245,16 @@ class OngoingPage extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text('Text text', style: KTextStyle18),
-                                      Text('text', style: KTextStyle18),
+                                      Text('Text text', style: kTextStyle18),
+                                      Text('text', style: kTextStyle18),
                                     ],
                                   ),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      Text('data', style: KTextStyle15,),
-                                      Text('time', style: KTextStyle15,),
+                                      Text('data', style: kTextStyle15,),
+                                      Text('time', style: kTextStyle15,),
                                     ],
                                   ),
                                 ],

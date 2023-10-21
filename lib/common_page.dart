@@ -4,7 +4,6 @@ import 'package:planner/start_page.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:planner/widgets/constants.dart';
 import 'package:provider/provider.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class CommonPage extends StatelessWidget {
   const CommonPage({Key? key}) : super(key: key);
@@ -26,10 +25,10 @@ class CommonPage extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.black,
-                      KVin,
-                      KVin,
-                      KVin,
-                      KPink
+                      kVin,
+                      kVin,
+                      kVin,
+                      kPink
                     ],
                     stops: [
                       0,
@@ -68,7 +67,7 @@ class CommonPage extends StatelessWidget {
                             color: Colors.transparent,
                             child: Icon(
                               Icons.arrow_back_ios_sharp,
-                              color: KPink.withOpacity(0.7),
+                              color: kPink.withOpacity(0.7),
                               size: size.width * 0.1,),
                           ),
                         ),
@@ -76,7 +75,7 @@ class CommonPage extends StatelessWidget {
                           width: size.width * 0.14,
                           height: size.width * 0.14,
                           decoration: BoxDecoration(
-                              color: KPink.withOpacity(0.7),
+                              color: kPink.withOpacity(0.7),
                               borderRadius: BorderRadius.circular(50)
                           ),
                           child: Padding(
@@ -90,12 +89,12 @@ class CommonPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(50),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: KPink.withOpacity(0.3),
+                                        color: kPink.withOpacity(0.3),
                                         offset: const Offset(5, 5),
                                         blurRadius: 15
                                     ),
                                     BoxShadow(
-                                        color: KPink.withOpacity(0.3),
+                                        color: kPink.withOpacity(0.3),
                                         offset: const Offset(-5, -5),
                                         blurRadius: 15
                                     )
@@ -122,12 +121,12 @@ class CommonPage extends StatelessWidget {
                           Text('Hi Julie',
                             style: TextStyle(
                                 fontSize: 35,
-                                color: KPink,
+                                color: kPink,
                                 fontFamily: 'Mulish Bold'),),
                           Text('6 Tasks are pending',
                             style: TextStyle(
                                 fontSize: 20,
-                                color: KPink,
+                                color: kPink,
                                 fontFamily: 'Mulish Bold'),)
                         ],
                       ),
@@ -142,10 +141,10 @@ class CommonPage extends StatelessWidget {
                         width: size.width * 0.9,
                         height: size.width * 0.25,
                         decoration: BoxDecoration(
-                            color: KYellow,
+                            color: kYellow,
                             borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: KBrown.withOpacity(0.9), width: 3),
-                            boxShadow: KboxShadow,
+                            border: Border.all(color: kBrown.withOpacity(0.9), width: 3),
+                            boxShadow: kBoxShadow,
                         ),
                         child: const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -156,14 +155,14 @@ class CommonPage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text('Mobile App \nFlutter',
-                                    style: KTextStyle18),
+                                    style: kTextStyle18),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text('Now',
-                                      style: KTextStyle15
+                                      style: kTextStyle15
                                   )
                                 ],
                               )
@@ -181,7 +180,7 @@ class CommonPage extends StatelessWidget {
                         Text('Monthly Review',
                           style: TextStyle(
                               fontSize: 25,
-                              color: KPink,
+                              color: kPink,
                               fontFamily: 'Mulish Bold'),)],
                     ),
                   ),
@@ -222,10 +221,10 @@ class CommonPage extends StatelessWidget {
                                 childCount: 4,
                                     (context, index) => Container(
                                   decoration: BoxDecoration(
-                                      color: KPink,
+                                      color: kPink,
                                       borderRadius: BorderRadius.circular(15),
-                                      border: Border.all(color: KBrown.withOpacity(0.8), width: 3),
-                                      boxShadow: KboxShadow,
+                                      border: Border.all(color: kBrown.withOpacity(0.8), width: 3),
+                                      boxShadow: kBoxShadow,
                                   ),
                                 ),
                               )

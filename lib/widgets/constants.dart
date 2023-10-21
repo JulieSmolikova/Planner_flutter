@@ -1,48 +1,48 @@
 import 'package:flutter/material.dart';
 
-const KLavander = Color(0xffaba9e0);
-const KYellow = Color(0xffded79f);
-const KPink = Color(0xffdcb1b9);
-const KVin = Color(0xff5c384f);
-const KGreen = Color(0xffa2dfcf);
-const KBrown = Color(0xff23262e);
-const KBlue = Color(0xffa3c5ea);
-const KBrown2 = Color(0xff241105);
+const kLavender = Color(0xffaba9e0);
+const kYellow = Color(0xffded79f);
+const kPink = Color(0xffdcb1b9);
+const kVin = Color(0xff5c384f);
+const kGreen = Color(0xffa2dfcf);
+const kBrown = Color(0xff23262e);
+const kBlue = Color(0xffa3c5ea);
+const kBrown2 = Color(0xff241105);
 
-final KboxShadow = [
+final kBoxShadow = [
   BoxShadow(
-    color: KBrown.withOpacity(0.4),
+    color: kBrown.withOpacity(0.4),
     offset: const Offset(-5, -5),
     blurRadius: 15
   ),
   BoxShadow(
-    color: KBrown.withOpacity(0.9),
+    color: kBrown.withOpacity(0.9),
     offset: const Offset(5, 5),
     blurRadius: 15
   )
 ];
 
-final KboxShadowYellow = [
+final kBoxShadowYellow = [
   BoxShadow(
-      color: KYellow.withOpacity(0.6),
+      color: kYellow.withOpacity(0.6),
       offset: const Offset(-2, -2),
       blurRadius: 10
   ),
   BoxShadow(
-      color: KYellow.withOpacity(0.6),
+      color: kYellow.withOpacity(0.6),
       offset: const Offset(2, 2),
       blurRadius: 10
   )
 ];
 
-const KTextStyle18 = TextStyle(
-  color: KBrown,
+const kTextStyle18 = TextStyle(
+  color: kBrown,
   fontFamily: 'Mulish Bold',
   fontSize: 18
 );
 
-const KTextStyle15 = TextStyle(
-    color: KBrown,
+const kTextStyle15 = TextStyle(
+    color: kBrown,
     fontFamily: 'Mulish Bold',
     fontSize: 15
 );

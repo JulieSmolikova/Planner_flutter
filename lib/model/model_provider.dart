@@ -4,6 +4,7 @@ import '../ongoing_page.dart';
 
 class Data extends ChangeNotifier {
 
+  //Navigation_Bar (MainPage, BottomNavBar)
   final List pages = [
     const CommonPage(),
     const OngoingPage(),
@@ -29,7 +30,6 @@ class Data extends ChangeNotifier {
 
   //Ongoing_Page
     // Months__ListWheelScrollView
-
   List months = [
     'January',
     'February',
@@ -45,52 +45,15 @@ class Data extends ChangeNotifier {
     'December',
   ];
 
- //  List months_data = [
- //    'January', '31',
- //    'February', '28',
- //    'March', '31',
- //    'April', '30',
- //    'May', '31',
- //    'June', '30',
- //    'July', '31',
- //    'August', '31',
- //    'September', '30',
- //    'October', '31',
- //    'November', '30',
- //    'December', '31',
- // ];
-
-  // List months_data = [
-  //   '31',
-  //   '28',
-  //   '31',
-  //   '30',
-  //   '31',
-  //   '30',
-  //   '31',
-  //   '31',
-  //   '30',
-  //   '31',
-  //   '30',
-  //   '31',
-  // ];
-
   int isSelectedMonth = 0;
   void SelectedMonth(int index) {
     isSelectedMonth = index;
     notifyListeners();
   }
 
-  //int amountData = 0;
   int isSelectedData = 0;
   void SelectedData(int index) {
     isSelectedData = index;
-    // if (isSelectedMonth == 0 || isSelectedMonth == 2 || isSelectedMonth == 4 || isSelectedMonth == 6 || isSelectedMonth == 7 || isSelectedMonth == 9 || isSelectedMonth == 11)
-    //   amountData = 31;
-    // if (isSelectedMonth == 1)
-    //   amountData = 28;
-    // if (isSelectedMonth == 3 || isSelectedMonth == 5 || isSelectedMonth == 8 || isSelectedMonth == 9 || isSelectedMonth == 10)
-    //   amountData = 31;
     notifyListeners();
   }
 

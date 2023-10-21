@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:planner/common_page.dart';
 import 'package:planner/model/model_provider.dart';
-import 'package:planner/ongoing_page.dart';
-import 'package:planner/widgets/constants.dart';
 import 'package:provider/provider.dart';
 
 class BottomNavBar extends StatelessWidget {
